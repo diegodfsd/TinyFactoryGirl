@@ -43,6 +43,11 @@ namespace TinyFactoryGirl
             return instance;
         }
 
+        public static void ClearDefinitions()
+        {
+            Definitions.Clear();
+        }
+
         private static string GenerateKey<T>(string alias = null)
         {
             var typeName = typeof(T).Name;
